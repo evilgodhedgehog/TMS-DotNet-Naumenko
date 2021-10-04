@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Homework2", "src\TeachMeSkills.Naumenko.Homework2\TeachMeSkills.Naumenko.Homework2.csproj", "{0F7497E0-6F93-449F-B7B4-CFFA25BE1F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMeSkills.Naumenko.Homework3_1", "TechMeSkills.Naumenko.Homework3_1\TechMeSkills.Naumenko.Homework3_1.csproj", "{477EAF8C-405A-437F-A891-85F2A26F24B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMeSkills.Naumenko.Homework3_1", "src\TechMeSkills.Naumenko.Homework3_1\TechMeSkills.Naumenko.Homework3_1.csproj", "{477EAF8C-405A-437F-A891-85F2A26F24B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
