@@ -10,9 +10,8 @@ namespace TeachMeSkills.Naumenko.Homework2
             Console.WriteLine("Введите дату в формате (число, месяц, год), например: 23.09.2021");
             string dateAdd = Console.ReadLine();
             string result;
-            DateTime day;
 
-            if (DateTime.TryParse(dateAdd, out day))
+            if (DateTime.TryParse(dateAdd, out DateTime day))
             {
                 result = day.ToString("dddd", CultureInfo.GetCultureInfo("ru-RU"));
                 Console.WriteLine($"{result}");
