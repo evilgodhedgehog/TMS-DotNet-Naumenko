@@ -15,6 +15,7 @@
 
             do
             {
+                Console.WriteLine("\n");
                 Console.Write("Input name: ");
                 var name = Console.ReadLine();
                 Console.Write("Input description: ");
@@ -22,15 +23,20 @@
                 Console.Write("Input status: ");
                 var status = Console.ReadLine();
 
-                var task = new ListOfTasks
+                try
                 {
-                    Name = name,
-                    Description = description,
-                    Status = status,
-                };
-
-                listOfTasks.Add(task);
-
+                    var task = new ListOfTasks
+                    {
+                        Name = name,
+                        Description = description,
+                        Status = status,
+                    };
+                    listOfTasks.Add(task);
+                }
+                catch(NullReferenceException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
 
                 stopInput = StopInput();
 
@@ -41,27 +47,29 @@
         static bool StopInput()
         {
             Console.Write("Stop input? (Press Y/y (Yes) or N/n (No)): ");
-            var key = ConsoleKey.N;
+            Console.WriteLine("\n");
+            var key = Console.ReadKey().Key;
             var stopInput = false;
 
-            while (key != ConsoleKey.Y)
+            do
             {
-                key = Console.ReadKey().Key;
-                Console.WriteLine("\n");
-
                 if (key == ConsoleKey.Y)
                 {
                     stopInput = true;
+                    break;
                 }
                 else if (key == ConsoleKey.N)
                 {
                     stopInput = false;
+                    break;
                 }
                 else
                 {
+                    Console.WriteLine("\n");
                     Console.WriteLine("Incorrect value. Press Y/y (Yes) or N/n (No) ");
+                    key = Console.ReadKey().Key;
                 }
-            }
+            } while (key != ConsoleKey.Y || key != ConsoleKey.N);
 
             return stopInput;
         }
