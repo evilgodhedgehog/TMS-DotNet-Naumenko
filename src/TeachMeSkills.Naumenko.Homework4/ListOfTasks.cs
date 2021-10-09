@@ -3,7 +3,14 @@
     internal class ListOfTasks
     {
         DateTime DateTimeTask = DateTime.Now;
-        string Id = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
+        public string Id
+        {
+            get
+            {
+                string Id = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
+                return Id;
+            }
+        }
         
         public string Name { get; set; }
 
@@ -13,6 +20,7 @@
 
         public void TaskDisplay()
         {
+            Console.WriteLine("\n");
             Console.WriteLine($"ID: {Id}");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Description: {Description}");
