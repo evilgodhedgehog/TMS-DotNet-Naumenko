@@ -2,14 +2,12 @@
 {
     internal class ListOfTasks
     {
+        string Id = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
         DateTime DateTimeTask = DateTime.Now;
-        public string Id
+
+        public string GetId()
         {
-            get
-            {
-                string Id = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
-                return Id;
-            }
+             return Id;   
         }
         
         public string Name { get; set; }

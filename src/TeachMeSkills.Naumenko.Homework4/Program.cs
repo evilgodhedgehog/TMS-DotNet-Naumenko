@@ -157,21 +157,22 @@
         {
             while (IsEditTasks())
             {
+                Console.WriteLine("\n");
                 Console.WriteLine($"Select ID to edit:\n");
 
                 foreach (var task in listOfTasks)
                 {
-                    Console.WriteLine($"{task.Id}");
+                    Console.WriteLine($"{task.GetId()}");
                 }
 
                 Console.WriteLine("Input ID to edit the task");
-                var idTask = Console.ReadLine();
+                var inputUserId = Console.ReadLine();
 
                 foreach (var task in listOfTasks)
                 {
-                    if(task.Id == idTask.ToUpperInvariant())
+                    if(task.GetId() == inputUserId.ToUpperInvariant())
                     {
-                        EditTask(idTask);
+                        EditProperties(task.GetId(), listOfTasks);
                     }
                     else
                     {
@@ -181,9 +182,27 @@
             }
         }
 
-        static void EditTask(string idTask)
+        static void EditProperties(string taskId, List<ListOfTasks> listOfTasks)
         {
+            foreach (var task in listOfTasks)
+            {
+                if (task.GetId() == taskId)
+                {
+                    Console.WriteLine("\n");
+                    Console.Write("Input name: ");
+                    var name = Console.ReadLine();
+                    Console.Write("Input description: ");
+                    var description = Console.ReadLine();
+                    Console.Write("Input status: ");
+                    var status = Console.ReadLine();
 
+                    task.Name = name;
+                    task.Description = description;
+                    task.Status = status;
+                }                
+            }
+
+            DisplayTasksOnScreen(listOfTasks);
         }
     }
 }
