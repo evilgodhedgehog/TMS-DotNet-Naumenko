@@ -7,9 +7,6 @@
             List<ListOfTasks> listOfTasks = new List<ListOfTasks>();
             InputTask(listOfTasks);
             EditTasks(listOfTasks);
-
-
-
         }
 
         static void InputTask(List<ListOfTasks> listOfTasks)
@@ -42,7 +39,6 @@
                 }
 
                 isStopInput = IsStopInput();
-
 
             } while (!isStopInput);
 
