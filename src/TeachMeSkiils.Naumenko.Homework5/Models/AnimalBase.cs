@@ -5,7 +5,18 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
     {
         private string ID = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
 
-        public string typeAnimal { get; set; }
+        private string animalType;
+        private string nameOfType;
+
+        public virtual string GetTypeAnimal()
+        {
+            return animalType;
+        }
+
+        public virtual string GetNameOfTypeAnimal()
+        {
+            return nameOfType;
+        }
 
         public string nameAnimal { get; set; }
 
@@ -25,7 +36,6 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
         {
             Console.WriteLine("Movement of the animal");
         }
-
     }
 }
 

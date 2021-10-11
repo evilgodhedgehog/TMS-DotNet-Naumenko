@@ -3,7 +3,12 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
     public class Bear :Predators
     {
-        public string NameOfType = "Bear";
+        private string nameOfType = "Bear";
+
+        public override string GetNameOfTypeAnimal()
+        {
+            return nameOfType;
+        }
 
         public override void Say()
         {

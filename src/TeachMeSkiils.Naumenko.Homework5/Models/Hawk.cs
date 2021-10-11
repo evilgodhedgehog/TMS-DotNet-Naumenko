@@ -3,7 +3,12 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
     public class Hawk : Birds
     {
-        public string NameOfType = "Hawk";
+        private string nameOfType = "Hawk";
+
+        public override string GetNameOfTypeAnimal()
+        {
+            return nameOfType;
+        }
 
         public override void Say()
         {
