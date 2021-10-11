@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
     public abstract class AnimalBase
@@ -6,6 +7,7 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
         private string ID = Guid.NewGuid().ToString().ToUpper().Substring(0, 3);
 
         private string animalType;
+
         private string nameOfType;
 
         public virtual string GetTypeAnimal()
