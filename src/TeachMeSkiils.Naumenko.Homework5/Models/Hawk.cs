@@ -16,6 +16,8 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
             base.Say();
             Console.WriteLine("I'm Hawk");
         }
+
+        public Predators predator { get; set; }
     }
 }
 

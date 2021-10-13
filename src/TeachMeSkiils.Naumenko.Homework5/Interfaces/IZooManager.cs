@@ -6,8 +6,11 @@ namespace TeachMeSkiils.Naumenko.Homework5.Interfaces
 {
     public interface IZooManager
     {
-        void AddAnimals();
+        bool IsAddAnimals();
+        bool IsShowAnimals();
+        void StartValueAnimal();
         void ShowAnimals();
+        void AddAnimals();
     }
 }
 

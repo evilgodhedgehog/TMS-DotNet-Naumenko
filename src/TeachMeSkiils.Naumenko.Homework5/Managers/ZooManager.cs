@@ -9,6 +9,64 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
     {
         List<AnimalBase> listAnimals { get; set; } = new List<AnimalBase>();
 
+        public void StartValueAnimal()
+        {
+            listAnimals.Add(new Bear
+            {
+                nameAnimal = "Bob",
+                ageAnimal = "2",
+            });
+
+            listAnimals.Add(new Wolf
+            {
+                nameAnimal = "Jeck",
+                ageAnimal = "3",
+            });
+
+            listAnimals.Add(new Parrot
+            {
+                nameAnimal = "Jon",
+                ageAnimal = "3",
+            });
+
+            listAnimals.Add(new Hawk
+            {
+                nameAnimal = "Ben",
+                ageAnimal = "4",
+            });
+        }
+
+        public bool IsAddAnimals()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine("Do you want to add an animals? (Press Y/y (Yes) or N/n (No)): ");
+
+            var key = Console.ReadKey().Key;
+            var isAddAnimals = false;
+
+            do
+            {
+                if (key == ConsoleKey.Y)
+                {
+                    isAddAnimals = true;
+                    break;
+                }
+                else if (key == ConsoleKey.N)
+                {
+                    isAddAnimals = false;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Incorrect value. Press Y/y (Yes) or N/n (No) ");
+                    key = Console.ReadKey().Key;
+                }
+            } while (key != ConsoleKey.Y || key != ConsoleKey.N);
+
+            return isAddAnimals;
+        }
+
         public void AddAnimals()
         {
             Console.WriteLine("\n");
@@ -77,6 +135,9 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
                         }
                         break;
                 }
+
+                isStop = IsAddAnimals();
+
             } while (!isStop);
         }
 
@@ -88,16 +149,52 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
             age = Console.ReadLine();
         }
 
+        public bool IsShowAnimals()
+        {
+            Console.WriteLine("\n");
+            Console.Write("Show tasks? (Press Y/y (Yes) or N/n (No)): ");
+
+            var key = Console.ReadKey().Key;
+            var isShowAnimals = false;
+
+            do
+            {
+                if (key == ConsoleKey.Y)
+                {
+                    isShowAnimals = true;
+                    break;
+                }
+                else if (key == ConsoleKey.N)
+                {
+                    isShowAnimals = false;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Incorrect value. Press Y/y (Yes) or N/n (No) ");
+                    key = Console.ReadKey().Key;
+                }
+            } while (key != ConsoleKey.Y || key != ConsoleKey.N);
+
+            return isShowAnimals;
+        }
+
         public void ShowAnimals()
         {
-            foreach (var animal in listAnimals)
+            if (IsShowAnimals())
             {
-                Console.WriteLine($"ID animal: {animal.GetID()}");
-                Console.WriteLine($"Type animal: {animal.GetTypeAnimal()}");
-                Console.WriteLine($"Name type animal: {animal.GetNameOfTypeAnimal()}");
-                Console.WriteLine($"Name animal: {animal.nameAnimal}");
-                Console.WriteLine($"Age animal: {animal.ageAnimal}");
+                foreach (var animal in listAnimals)
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine($"ID animal: {animal.GetID()}");
+                    Console.WriteLine($"Type animal: {animal.GetTypeAnimal()}");
+                    Console.WriteLine($"Name type animal: {animal.GetNameOfTypeAnimal()}");
+                    Console.WriteLine($"Name animal: {animal.nameAnimal}");
+                    Console.WriteLine($"Age animal: {animal.ageAnimal}");
+                }
             }
+            
         }
     }
 }
