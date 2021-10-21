@@ -2,13 +2,16 @@
 
 namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
-    public class Hawk : Birds
+    public class Hawk : Predator
     {
-        private string nameOfType = "Hawk";
+        private string typePredator = "Hawk";
 
-        public override string GetNameOfTypeAnimal()
+        public string TypePredator
         {
-            return nameOfType;
+            get
+            {
+                return typePredator;
+            }
         }
 
         public override void Say()
@@ -17,7 +20,10 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
             Console.WriteLine("I'm Hawk");
         }
 
-        public Predators predator { get; set; }
+        public override void GoTo()
+        {
+            Console.WriteLine("To fly");
+        }
     }
 }
 

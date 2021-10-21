@@ -11,15 +11,20 @@ namespace TeachMeSkiils.Naumenko.Homework5
         static void Main(string[] args)
         {
             IZooManager zooManager = new ZooManager();
-            zooManager.StartValueAnimal();
+            zooManager.StartAnimalValue();
             Console.WriteLine("Welcome to the zoo");
             Console.WriteLine("Look at our animals");
             zooManager.ShowAnimals();
 
             if (zooManager.IsAddAnimals())
             {
-                zooManager.AddAnimals();
+                zooManager.AddAnimal();
             }
+
+            zooManager.EditAnimal();
+
+            zooManager.ShowAnimals();
+
             Console.ReadKey();
         }        
     }

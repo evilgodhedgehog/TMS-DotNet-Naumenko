@@ -7,32 +7,32 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
 {
     public class ZooManager : IZooManager
     {
-        List<AnimalBase> listAnimals { get; set; } = new List<AnimalBase>();
+        List<Animal> listAnimals = new List<Animal>();
 
-        public void StartValueAnimal()
+        public void StartAnimalValue()
         {
-            listAnimals.Add(new Bear
+            listAnimals.Add(new Rabbit
             {
-                nameAnimal = "Bob",
-                ageAnimal = "2",
+                Name = "Bob",
+                Age = "2",
             });
 
             listAnimals.Add(new Wolf
             {
-                nameAnimal = "Jeck",
-                ageAnimal = "3",
+                Name = "Jeck",
+                Age = "3",
             });
 
             listAnimals.Add(new Parrot
             {
-                nameAnimal = "Jon",
-                ageAnimal = "3",
+                Name = "Jon",
+                Age = "3",
             });
 
             listAnimals.Add(new Hawk
             {
-                nameAnimal = "Ben",
-                ageAnimal = "4",
+                Name = "Ben",
+                Age = "4",
             });
         }
 
@@ -67,30 +67,30 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
             return isAddAnimals;
         }
 
-        public void AddAnimals()
+        public void AddAnimal()
         {
             Console.WriteLine("\n");
-            Console.WriteLine("Select type of animal to added:\n Bear\n Wolf\n Parrot\n Hawk\n");
+            Console.WriteLine("Select type of animal to added:\n Rabbit\n Wolf\n Parrot\n Hawk");
             string userInputTypeAnimal;
-            bool isStop = false;
+            bool isAdd = true;
 
             do
             {
+                Console.WriteLine("\n");
                 Console.WriteLine("Input type of animal: ");
                 userInputTypeAnimal = Console.ReadLine();
 
                 switch (userInputTypeAnimal.ToUpper())
                 {
-                    case "BEAR":
+                    case "RABBIT":
                         {
                             AddingAnAnimal(out string name, out string age);
 
-                            listAnimals.Add(new Bear
+                            listAnimals.Add(new Rabbit
                             {
-                                nameAnimal = name,
-                                ageAnimal = age,
+                                Name = name,
+                                Age = age,
                             });
-                            isStop = true;
                         }
                         break;
                     case "WOLF":
@@ -99,10 +99,9 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
 
                             listAnimals.Add(new Wolf
                             {
-                                nameAnimal = name,
-                                ageAnimal = age,
+                                Name = name,
+                                Age = age,
                             });
-                            isStop = true;
                         }
                         break;
                     case "PARROT":
@@ -111,10 +110,9 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
 
                             listAnimals.Add(new Parrot
                             {
-                                nameAnimal = name,
-                                ageAnimal = age,
+                                Name = name,
+                                Age = age,
                             });
-                            isStop = true;
                         }
                         break;
                     case "HAWK":
@@ -123,10 +121,9 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
 
                             listAnimals.Add(new Hawk
                             {
-                                nameAnimal = name,
-                                ageAnimal = age,
+                                Name = name,
+                                Age = age,
                             });
-                            isStop = true;
                         }
                         break;
                     default:
@@ -136,9 +133,9 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
                         break;
                 }
 
-                isStop = IsAddAnimals();
+                isAdd = IsAddAnimals();
 
-            } while (!isStop);
+            } while (isAdd);
         }
 
         public void AddingAnAnimal(out string name, out string age)
@@ -152,7 +149,7 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
         public bool IsShowAnimals()
         {
             Console.WriteLine("\n");
-            Console.Write("Show tasks? (Press Y/y (Yes) or N/n (No)): ");
+            Console.Write("Show animals? (Press Y/y (Yes) or N/n (No)): ");
 
             var key = Console.ReadKey().Key;
             var isShowAnimals = false;
@@ -187,14 +184,76 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
                 foreach (var animal in listAnimals)
                 {
                     Console.WriteLine("\n");
-                    Console.WriteLine($"ID animal: {animal.GetID()}");
-                    Console.WriteLine($"Type animal: {animal.GetTypeAnimal()}");
-                    Console.WriteLine($"Name type animal: {animal.GetNameOfTypeAnimal()}");
-                    Console.WriteLine($"Name animal: {animal.nameAnimal}");
-                    Console.WriteLine($"Age animal: {animal.ageAnimal}");
+                    Console.WriteLine($"ID animal: {animal.ID}");
+                    Console.WriteLine($"Name animal: {animal.Name}");
+                    Console.WriteLine($"Age animal: {animal.Age}");
+                    animal.Say();
+                    animal.GoTo();
                 }
             }
-            
+        }
+
+        public bool IsEditAnimals()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine("Do you want to edit animals? (Press Y/y (Yes) or N/n (No)): ");
+
+            var key = Console.ReadKey().Key;
+            var isEditAnimals = false;
+
+            do
+            {
+                if (key == ConsoleKey.Y)
+                {
+                    isEditAnimals = true;
+                    break;
+                }
+                else if (key == ConsoleKey.N)
+                {
+                    isEditAnimals = false;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Incorrect value. Press Y/y (Yes) or N/n (No) ");
+                    key = Console.ReadKey().Key;
+                }
+            } while (key != ConsoleKey.Y || key != ConsoleKey.N);
+
+            return isEditAnimals;
+        }
+
+        public void EditAnimal()
+        {
+            while (IsEditAnimals())
+            {
+                Console.WriteLine("\n");
+                Console.WriteLine($"Select ID to edit:\n");
+
+                foreach (var animal in listAnimals)
+                {
+                    Console.WriteLine($"{animal.ID}");
+                }
+
+                Console.WriteLine("Input ID to edit the animal");
+                var inputUserId = Console.ReadLine();
+
+                foreach (var animal in listAnimals)
+                {
+                    if (animal.ID == inputUserId.ToUpperInvariant())
+                    {
+                        Console.WriteLine("\n");
+                        Console.Write("Input name: ");
+                        var name = Console.ReadLine();
+                        Console.Write("Input age: ");
+                        var age = Console.ReadLine();
+
+                        animal.Name = name;
+                        animal.Age = age;
+                    }
+                }
+            }
         }
     }
 }

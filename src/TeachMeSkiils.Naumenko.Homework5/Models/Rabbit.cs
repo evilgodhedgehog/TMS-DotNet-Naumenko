@@ -1,10 +1,9 @@
 ﻿using System;
-
 namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
-    public class Parrot : Herbivore
+    public class Rabbit : Herbivore
     {
-        private string typeHerbivore = "Parrot";
+        private string typeHerbivore = "Rabbit";
 
         public string TypeHerbivore
         {
@@ -17,12 +16,12 @@ namespace TeachMeSkiils.Naumenko.Homework5.Models
         public override void Say()
         {
             base.Say();
-            Console.WriteLine("I'm Parrot");
+            Console.WriteLine("I'm Rabbit");
         }
 
         public override void GoTo()
         {
-            Console.WriteLine("To fly");
+            Console.WriteLine("To jump");
         }
     }
 }

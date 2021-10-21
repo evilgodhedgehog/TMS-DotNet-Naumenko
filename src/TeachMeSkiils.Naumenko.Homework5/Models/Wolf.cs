@@ -2,19 +2,22 @@
 
 namespace TeachMeSkiils.Naumenko.Homework5.Models
 {
-    public class Wolf : Predators
+    public class Wolf : Predator
     {
-        private string nameOfType = "Wolf";
+        private string typePredator = "Wolf";
 
-        public override string GetNameOfTypeAnimal()
+        public string TypePredator
         {
-            return nameOfType;
+            get
+            {
+                return typePredator;
+            }
         }
 
         public override void Say()
         {
-            Console.WriteLine("I'm wolf. Ayyyyyyyy");
             base.Say();
+            Console.WriteLine("I'm wolf. Ayyyyyyyy");
         }
 
         public override void GoTo()
