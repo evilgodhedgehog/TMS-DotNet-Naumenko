@@ -6,7 +6,8 @@ namespace TeachMeSkills.Naumenko.Homework6
     {
         static void Main(string[] args)
         {
-            
+            ATM atm = new ATM();
+            atm.Run();
         }
     }
 }
