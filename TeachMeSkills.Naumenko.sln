@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMeSkills.Naumenko.Homework3_1", "src\TechMeSkills.Naumenko.Homework3_1\TechMeSkills.Naumenko.Homework3_1.csproj", "{477EAF8C-405A-437F-A891-85F2A26F24B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Homework7", "src\TeachMeSkills.Naumenko.Homework7\TeachMeSkills.Naumenko.Homework7.csproj", "{6F442784-F316-4E94-8480-20A8447BA5AE}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Homework6", "src\TeachMeSkills.Naumenko.Homework6\TeachMeSkills.Naumenko.Homework6.csproj", "{1A540269-95F1-4283-BC82-6D205C4C386D}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkiils.Naumenko.Homework5", "src\TeachMeSkiils.Naumenko.Homework5\TeachMeSkiils.Naumenko.Homework5.csproj", "{1FC48676-B007-4279-BDA3-54A0A7117D61}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachMeSkills.Naumenko.Homework4", "src\TeachMeSkills.Naumenko.Homework4\TeachMeSkills.Naumenko.Homework4.csproj", "{8241995C-3D90-4039-A1FE-7DB912C9B207}"
@@ -39,6 +40,14 @@ Global
 		{69F186DC-77FE-4365-9B31-E7877A48D233}.Debug|anycpu.Build.0 = Debug|anycpu
 		{69F186DC-77FE-4365-9B31-E7877A48D233}.Release|anycpu.ActiveCfg = Release|anycpu
 		{69F186DC-77FE-4365-9B31-E7877A48D233}.Release|anycpu.Build.0 = Release|anycpu
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{6F442784-F316-4E94-8480-20A8447BA5AE}.Release|anycpu.Build.0 = Release|Any CPU
 		{1A540269-95F1-4283-BC82-6D205C4C386D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A540269-95F1-4283-BC82-6D205C4C386D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A540269-95F1-4283-BC82-6D205C4C386D}.Release|Any CPU.ActiveCfg = Release|Any CPU
