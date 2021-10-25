@@ -9,7 +9,7 @@ namespace TeachMeSkiils.Naumenko.Homework5.Managers
     {
         List<Animal> listAnimals = new List<Animal>();
 
-        public void StartAnimalValue()
+        public void ActionShowAnimals()
         {
             listAnimals.Add(new Rabbit
             {
