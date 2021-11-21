@@ -1,0 +1,120 @@
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.top-line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #101214;
+}
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 100%;
+  }
+}
+.container {
+    display: flex;
+    max-width: 600px;
+    margin: auto;
+}
+.col-70 {
+    width: 70%;
+    padding: 0 10px;
+}
+.col-30 {
+    width: 30%;
+    padding: 0 10px;
+}
+header {
+    padding: 60px 0 20px 0;
+}
+.header-information {
+    display: inline-block;
+    font-family: Arial;
+    font-style: normal;
+    color: #101214;
+}
+.header-information__name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+.header-information__position {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;    
+}
+.header-photo {
+    display: inline-block;
+}
+.header-photo__img {
+    width: 72px;
+    height: 72px;
+}
+
+.experience .experience-title,
+.education .education-title {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #73808D;
+}
+.experience-list,
+.education-list {
+    font-family: Arial;
+    font-style: normal;
+    line-height: 18px;
+    color: #101214;
+}
+.experience-list li,
+.education-list li {
+    margin: 20px 0px;
+}
+.experience-list li:first-child,
+.education-list li:first-child {
+    margin: 0;
+}
+.experience-list .experience-list__title,
+.education-list .education-list__title {
+    font-weight: bold;
+    font-size: 11px;
+}
+.experience-list .experience-list__enterprise,
+.experience-list .experience-list__description,
+.education-list .education-list__school {
+    font-weight: normal;
+    font-size: 11px;
+}
+.experience-list .experience-list__time,
+.education-list .education-list__time {
+    font-weight: normal;
+    font-size: 9px;
+    color: #73808D;
+}
+.short-info .short-info-list__title {
+    font-weight: bold;
+    color: #73808D;
+    font-size: 11px;
+}
+.short-info-list {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 15px;
+}
+.short-info-list li {
+    color: #73808D;
+}
